@@ -8,3 +8,7 @@ def pure_guess(range_min, range_max, target):
         if guess == target:
             print(f"Found the number in {attempts} guesses!")
             break
+        elif guess > target:
+            range_max = guess
+        elif guess < target:
+            range_min = guess
